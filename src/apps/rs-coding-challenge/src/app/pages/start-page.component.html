@@ -45,6 +45,9 @@
               [ngModel]="activeElement().style.corners"
               (ngModelChange)="updateElement(activeElement(), $event)">
           </app-element-border-radius >
+
+          You can use the app-unit-input component for the inputs
+          <app-unit-input unit="px" [ngModel]="corner"></app-unit-input>
           -->
         </div>
 
