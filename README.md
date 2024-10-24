@@ -63,6 +63,7 @@ You can also view the instructions as [PDF](![design.pdf](./design.pdf))
 - localhost:4200
 - The starting point is in [start-page.component.html](./src/apps/rs-coding-challenge/src/app/pages/start-page.component.html)
 - You can use the [unit-input](./src/apps/rs-coding-challenge/src/app/components/unit-input) as input field
+- You can use icons from the icon library [Ant Design Icons](https://ng.ant.design/components/icon/en#ng-content)
 
 ## Objective
 - This repository should give you an impression about our tech stack and coding style
