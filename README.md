@@ -54,7 +54,7 @@ This is how a sample `ContentGraph` object can look like
 
 ![design-instructions](./design.jpg)
 
-You can also view the instructions as [PDF](![design.pdf](./design.pdf))
+You can also view the specs as [PDF](![design.pdf](./design.pdf))
 
 ## Getting Started
 - Fork this repository
