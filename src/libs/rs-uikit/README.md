@@ -1,7 +1,5 @@
 # rs-uikit
 
-This library was generated with [Nx](https://nx.dev).
-
-## Running unit tests
-
-Run `nx test rs-uikit` to execute the unit tests.
+- This is an extract of our internal design library
+- It only represents a tiny fraction of our design library
+- The library builds upon the [Ant Design Library for Angular Apps](https://ng.ant.design/docs/introduce/en)

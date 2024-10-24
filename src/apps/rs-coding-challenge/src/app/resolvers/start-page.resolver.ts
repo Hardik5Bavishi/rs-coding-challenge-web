@@ -1,5 +1,6 @@
 import { inject, Injectable } from '@angular/core';
-import { forkJoin, Observable } from 'rxjs';
+import produce from 'immer';
+import { forkJoin, map, Observable } from 'rxjs';
 import { StartPageData } from '../pages/start-page.component';
 import { ContentGraphApi } from '../services/content-graph.api';
 
@@ -12,6 +13,11 @@ export class StartPageResolver {
   resolve(): Observable<StartPageData> {
     return forkJoin({
       contentGraph: this.contentGraphApi.getContentGraph(),
-    });
+    })
+      .pipe(
+        map(data => {
+          return produce(data, () => undefined) // Create immutable object
+        })
+      );
   }
 }
