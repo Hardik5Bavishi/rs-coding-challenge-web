@@ -87,4 +87,4 @@ You can also view the instructions as [PDF](![design.pdf](./design.pdf))
 
 ## Demo
 This is how the result could look like
-[Demo](./demo.mp4)
+https://github.com/radiosphere/rs-coding-challenge-web/raw/refs/heads/main/demo.mp4
