@@ -1,0 +1,10 @@
+<input nz-input
+       [type]="editMode() ? 'number' : 'text'"
+       [ngModel]="editMode() ? value() : valueWithUnit()"
+       [nzBorderless]="!editMode()"
+       (ngModelChange)="update($event)"
+       (focus)="editMode.set(true)"
+       (blur)="editMode.set(false)" />
+
+
+

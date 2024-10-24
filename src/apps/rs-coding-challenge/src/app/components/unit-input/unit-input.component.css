@@ -1,0 +1,6 @@
+.unit-box{
+  background: var(--rs-c-gray-3);
+  font-size: smaller;
+  padding: 4px;
+  border-radius: 4px;
+}
