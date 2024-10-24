@@ -71,6 +71,7 @@ You can also view the specs as [PDF](![design.pdf](./design.pdf))
 - This is just a tiny fraction of our actual project (also the rs-uikit is just a partial)
 - We would like to see how well you can handle working on an existing project and how you would implement the given challenge
 - Also, we would like to see how you deal with already defined design specs
+- We would like to see the usage of Angular Signals
 
 ## Tech Stack
 - We are using the latest version of Angular. We are currently migrating to Angular Signals
