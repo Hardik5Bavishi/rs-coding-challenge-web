@@ -1,0 +1,23 @@
+:host {
+  .container {
+    display: flex;
+    flex-direction: row;
+    padding: 16px;
+    .content {
+      display: flex;
+      flex-direction: column;
+      .input-container {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+    }
+    span.anticon.anticon-link {
+      padding: 4px;
+      cursor: pointer;
+      &.active {
+        color: var(--rs-c-primary);
+      }
+    }
+  }
+}
