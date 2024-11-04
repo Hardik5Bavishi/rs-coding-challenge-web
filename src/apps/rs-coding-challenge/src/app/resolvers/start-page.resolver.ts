@@ -13,11 +13,12 @@ export class StartPageResolver {
   resolve(): Observable<StartPageData> {
     return forkJoin({
       contentGraph: this.contentGraphApi.getContentGraph(),
-    })
-      .pipe(
-        map(data => {
-          return produce(data, () => undefined) // Create immutable object
-        })
-      );
+    }).pipe(
+      map((data) => {
+        return produce(data, (draft) => {
+          return { ...draft };
+        });
+      })
+    );
   }
 }

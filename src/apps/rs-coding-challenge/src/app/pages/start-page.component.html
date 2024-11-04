@@ -3,16 +3,21 @@
     <rs-ui-box-header icon="home" title="Start Page">
       <h2>This is our start page</h2>
 
-      <p class="text-mute">
-        Here you can do some useful stuff
-      </p>
+      <p class="text-mute">Here you can do some useful stuff</p>
 
-      <ng-container *rsUiAction="let i; options: {type: ActionType.primary, click: save}">
+      <ng-container
+        *rsUiAction="let i; options: { type: ActionType.primary, click: save }"
+      >
         <span nz-icon nzType="save" nzTheme="outline"></span>
         Save
       </ng-container>
 
-      <ng-container *rsUiAction="let i; options: {type: ActionType.danger, click: deleteContentGraph}">
+      <ng-container
+        *rsUiAction="
+          let i;
+          options: { type: ActionType.danger, click: deleteContentGraph }
+        "
+      >
         <span nz-icon nzType="rest" nzTheme="outline"></span>
         Delete
       </ng-container>
@@ -23,41 +28,33 @@
     <div class="rs-l-grid rs-l-grid--col-2 rs-s-gap--lg">
       <div class="rs-l-flex rs-s-gap--lg">
         <ul class="element-list rs-no--shrink rs-no--list">
-          @for (element of contentGraph().attributes.main.elements; track element.elementId) {
-            <li (click)="activeElement.set(element)"
-                [class.active]="element.elementId === activeElement()?.elementId">
-              {{ element.displayName }}
-            </li>
+          @for (element of contentGraph().attributes.main.elements; track
+          element.elementId) {
+          <li
+            (click)="activeElement.set(element)"
+            [class.active]="element.elementId === activeElement()?.elementId"
+          >
+            {{ element.displayName }}
+          </li>
           }
         </ul>
 
-        <div class="configurator rs-l-flex__item--stretch rs-l-flex rs-l-flex--center">
-          Let the user configure the border radius for each box
-
-          <!--
-          Please implement a component that lets the user set the
-          border radius for each selected element.
-          The design specification how the component should look like
-          can be found in design.pdf
-
-          The component could look like this
+        <div
+          class="configurator rs-l-flex__item--stretch rs-l-flex rs-l-flex--center"
+        >
           <app-element-border-radius
-              [ngModel]="activeElement().style.corners"
-              (ngModelChange)="updateElement(activeElement(), $event)">
-          </app-element-border-radius >
-
-          You can use the app-unit-input component for the inputs
-          <app-unit-input unit="px" [ngModel]="corner"></app-unit-input>
-          -->
+            [ngModel]="activeElement().style.corners"
+            (ngModelChange)="updateElement($event)"
+          >
+          </app-element-border-radius>
         </div>
 
         <div class="rs-l-flex__item--stretch">
           @if (activeElement()) {
-            {{ activeElement().displayName }}
-            {{ activeElement().style.corners | json }}
-            <app-corner-box
-              [ngModel]="activeElement().style.corners">
-            </app-corner-box>
+          {{ activeElement().displayName }}
+          {{ activeElement().style.corners | json }}
+          <app-corner-box [ngModel]="activeElement().style.corners">
+          </app-corner-box>
           }
         </div>
       </div>
