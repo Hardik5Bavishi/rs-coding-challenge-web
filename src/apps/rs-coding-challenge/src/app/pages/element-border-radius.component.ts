@@ -26,13 +26,16 @@ export class ElementBorderRadiusComponent {
     this.bottomLeft.set(corners[3]);
   }
 
-  @Output() ngModelChange = new EventEmitter<number[]>();
+  @Output() ngModelChange = new EventEmitter<
+    [number, number, number, number]
+  >();
 
   // Destructure both getter and setter for each corner signal
   topLeft: WritableSignal<number> = signal(null);
   topRight: WritableSignal<number> = signal(null);
   bottomRight: WritableSignal<number> = signal(null);
   bottomLeft: WritableSignal<number> = signal(null);
+
 
   isLinked = false;
 
